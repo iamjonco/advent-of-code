@@ -1,6 +1,8 @@
 import itertools
 import math
 
+import util
+
 
 def find_2020(x, length=2):
     for i in itertools.permutations(x, length):
@@ -14,7 +16,6 @@ def read_inputs(filepath) -> list:
 
 
 if __name__ == '__main__':
-    fp = "inputs/day1_1.csv"
-    expense_report = read_inputs(fp)
+    expense_report = read_inputs(util.get_input_path("day1_1.txt"))
     entries = find_2020(expense_report, 3)
     print(math.prod(entries))

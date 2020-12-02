@@ -1,5 +1,7 @@
 import re
 
+import util
+
 _INPUT = re.compile("([0-9]+)-([0-9]+) ([a-z]): (.*)")
 
 
@@ -17,7 +19,6 @@ def is_valid(pw: tuple) -> bool:
 
 
 if __name__ == '__main__':
-    filepath = "inputs/day2_1.txt"
-    inputs = read_inputs(filepath)
+    inputs = read_inputs(util.get_input_path("day2_1.txt"))
     results = list(filter(is_valid, inputs))
     print(len(results))
