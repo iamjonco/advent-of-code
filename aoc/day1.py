@@ -15,7 +15,7 @@ def read_inputs(filepath) -> list:
         return [int(i.strip()) for i in f.readlines()]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     expense_report = read_inputs(util.get_input_path("day1_1.txt"))
     entries = find_2020(expense_report, 3)
     print(math.prod(entries))
