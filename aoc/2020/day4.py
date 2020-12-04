@@ -11,15 +11,15 @@ _ECL_VALID = ["amb", "blu", "brn", "gry", "grn", "hzl", "oth"]
 
 class Passport:
     def __init__(
-            self,
-            byr=None,
-            iyr=None,
-            eyr=None,
-            hgt=None,
-            hcl=None,
-            ecl=None,
-            pid=None,
-            cid=None,
+        self,
+        byr=None,
+        iyr=None,
+        eyr=None,
+        hgt=None,
+        hcl=None,
+        ecl=None,
+        pid=None,
+        cid=None,
     ):
         self.byr = byr
         """Birth Year"""
@@ -118,14 +118,14 @@ class Passport:
 
     def is_valid(self) -> bool:
         return (
-                self.is_byr_valid()
-                and self.is_iyr_valid()
-                and self.is_eyr_valid()
-                and self.is_hgt_valid()
-                and self.is_hcl_valid()
-                and self.is_ecl_valid()
-                and self.is_pid_valid()
-                and self.is_cid_valid()
+            self.is_byr_valid()
+            and self.is_iyr_valid()
+            and self.is_eyr_valid()
+            and self.is_hgt_valid()
+            and self.is_hcl_valid()
+            and self.is_ecl_valid()
+            and self.is_pid_valid()
+            and self.is_cid_valid()
         )
 
 
