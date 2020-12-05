@@ -94,5 +94,5 @@ def part_2(inputs: List[BoardingPass]):
 if __name__ == "__main__":
     with open(util.get_input_path("day5_1.txt")) as f:
         passes = [BoardingPass(line.strip()) for line in f.readlines()]
-    part_1(inputs)
+    part_1(passes)
     part_2(passes)
