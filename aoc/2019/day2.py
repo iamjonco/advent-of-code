@@ -16,7 +16,7 @@ class OpCode(Enum):
         return entry
 
     def __repr__(self):
-        return f'<{type(self).__name__}.{self.name}: ({self.code!r}, {self.op!r})>'
+        return f"<{type(self).__name__}.{self.name}: ({self.code!r}, {self.op!r})>"
 
 
 class Computer:
@@ -45,7 +45,9 @@ class Computer:
     @staticmethod
     def from_file(filename):
         with open(util.get_input_path(filename)) as f:
-            return Computer([int(x) for line in f.readlines() for x in line.strip().split(",")])
+            return Computer(
+                [int(x) for line in f.readlines() for x in line.strip().split(",")]
+            )
 
 
 def part_1():
@@ -60,6 +62,6 @@ def part_2():
             assert 100 * noun + verb == 8478
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     part_1()
     part_2()
