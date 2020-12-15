@@ -3,8 +3,8 @@ def get_nth(numbers, nth):
         return numbers[nth - 1]
 
     prev = numbers[-1]
-    last_spoken = {n: i for i, n in enumerate(numbers)}
-    for t in range(len(numbers) - 1, nth - 1):
+    last_spoken = {n: i + 1 for i, n in enumerate(numbers)}
+    for t in range(len(numbers), nth):
         next = t - last_spoken.get(prev, t)
         last_spoken[prev] = t
         prev = next
