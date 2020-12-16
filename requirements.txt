@@ -16,16 +16,17 @@ iniconfig==1.1.1          # via pytest
 mypy-extensions==0.4.3    # via black
 nodeenv==1.5.0            # via pre-commit
 numpy==1.19.4             # via -r requirements.in
-packaging==20.7           # via pytest
+packaging==20.8           # via pytest
 pathspec==0.8.1           # via black
 pluggy==0.13.1            # via pytest
-pre-commit==2.9.2         # via -r requirements.in
-py==1.9.0                 # via pytest
+pre-commit==2.9.3         # via -r requirements.in
+py==1.10.0                # via pytest
 pyparsing==2.4.7          # via packaging
-pytest==6.1.2             # via -r requirements.in
+pytest==6.2.0             # via -r requirements.in
 pyyaml==5.3.1             # via pre-commit
 regex==2020.11.13         # via black
 six==1.15.0               # via virtualenv
+tabulate==0.8.7           # via -r requirements.in
 toml==0.10.2              # via black, pre-commit, pytest
 typed-ast==1.4.1          # via black
 typing-extensions==3.7.4.3  # via black
