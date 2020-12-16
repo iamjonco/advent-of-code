@@ -36,6 +36,6 @@ def is_valid(pw: tuple) -> bool:
 
 
 if __name__ == "__main__":
-    print("Day 1")
+    print("Day 2")
     print(f"Part 1: {part_1()}")
     print(f"Part 2: {part_2()}")
