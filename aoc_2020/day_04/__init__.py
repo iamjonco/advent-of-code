@@ -63,6 +63,6 @@ def part_2(filepath=None):
 
 
 if __name__ == "__main__":
-    print("Day 2")
+    print("Day 4")
     print(f"Part 1: {part_1()}")
     print(f"Part 2: {part_2()}")
