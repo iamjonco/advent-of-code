@@ -1,8 +1,6 @@
 import fileinput
 from collections import namedtuple
 
-dirs = ["E", "S", "W", "N"]
-
 Instruction = namedtuple("Instruction", ["op", "value"])
 
 
