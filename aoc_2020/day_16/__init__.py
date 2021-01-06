@@ -1,11 +1,9 @@
 import fileinput
 from functools import reduce
 
-import util
 
-
-def get_inputs(filepath):
-    fi = fileinput.input(util.get_input_path(filepath))
+def get_inputs(filename=None):
+    fi = fileinput.input(filename or "inputs.txt")
 
     rules = {}
     line: str = fi.readline().strip()
@@ -51,12 +49,14 @@ def get_field_map(rules: dict[str, list[int]], ticket: list[int]):
     return fields
 
 
-def part_1(rules: dict[str, list[int]], tickets: list[list[int]]):
-    invalid = [get_invalid_field(rules, t) for t in tickets]
+def part_1(filename=None):
+    rules, tickets = get_inputs(filename)
+    invalid = (get_invalid_field(rules, t) for t in tickets)
     return sum(invalid)
 
 
-def part_2(rules: dict[str, list[int]], tickets: list[list[int]]):
+def part_2(filename=None):
+    rules, tickets = get_inputs(filename)
     # Get potential fields for valid tickets
     field_maps = []
     for t in tickets:
@@ -85,17 +85,10 @@ def part_2(rules: dict[str, list[int]], tickets: list[list[int]]):
     departure_value = [
         tickets[0][i] for i, k in enumerate(resolved) if "departure" in k
     ]
-    print(resolved)
-    print(departure_value)
     return reduce(lambda x, y: x * y, departure_value, 1)
 
 
 if __name__ == "__main__":
-    example_rules, example_tickets = get_inputs("day16_2.txt")
-    assert part_1(example_rules, example_tickets[1:]) == 71
-    # example_rules, example_tickets = get_inputs("day16_3.txt")
-    # print(part_2(example_rules, example_tickets))
-
-    real_rules, real_tickets = get_inputs("day16_1.txt")
-    assert part_1(real_rules, real_tickets[1:]) == 24980
-    print(part_2(real_rules, real_tickets))
+    print("Day 16")
+    print(f"Part 1: {part_1()}")
+    print(f"Part 2: {part_2()}")
