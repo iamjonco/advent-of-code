@@ -4,3 +4,4 @@ pytest
 numpy
 tabulate
 lark-parser
+Jinja2

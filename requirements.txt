@@ -11,12 +11,14 @@ cfgv==3.2.0               # via pre-commit
 click==7.1.2              # via black
 distlib==0.3.1            # via virtualenv
 filelock==3.0.12          # via virtualenv
-identify==1.5.10          # via pre-commit
+identify==1.5.11          # via pre-commit
 iniconfig==1.1.1          # via pytest
+jinja2==2.11.2            # via -r requirements.in
 lark-parser==0.11.1       # via -r requirements.in
+markupsafe==1.1.1         # via jinja2
 mypy-extensions==0.4.3    # via black
 nodeenv==1.5.0            # via pre-commit
-numpy==1.19.4             # via -r requirements.in
+numpy==1.19.5             # via -r requirements.in
 packaging==20.8           # via pytest
 pathspec==0.8.1           # via black
 pluggy==0.13.1            # via pytest
@@ -29,6 +31,6 @@ regex==2020.11.13         # via black
 six==1.15.0               # via virtualenv
 tabulate==0.8.7           # via -r requirements.in
 toml==0.10.2              # via black, pre-commit, pytest
-typed-ast==1.4.1          # via black
+typed-ast==1.4.2          # via black
 typing-extensions==3.7.4.3  # via black
 virtualenv==20.2.2        # via pre-commit
