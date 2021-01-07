@@ -35,13 +35,13 @@ init_tmp = env.get_template("__init__.py.jinja")
 
 for day in range(1, 26):
     d = f"{day:02d}"
-    tmp_args = {"day": d}
+    tmp_args = {"day": d, "year": args.year}
 
     folder = root / f"day_{d}"
     folder.mkdir(exist_ok=True)
 
     # input.txt
-    (folder / "input.txt").touch(exist_ok=True)
+    (folder / "inputs.txt").touch(exist_ok=True)
 
     # tests.py
     test_tmp.stream(tmp_args).dump(str(folder / "tests.py"))
