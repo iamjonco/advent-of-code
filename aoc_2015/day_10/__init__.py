@@ -1,8 +1,4 @@
-import fileinput
-
-
-def get_inputs(filename=None):
-    return fileinput.input(filename or "inputs.txt")
+start = 1113122113
 
 
 def part_1(filename=None):
