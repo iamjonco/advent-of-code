@@ -1,12 +1,28 @@
-start = 1113122113
+import re
+
+start = "1113122113"
 
 
-def part_1(filename=None):
-    pass
+def calculate(r: int, sequence: str = None):
+    n = str(sequence) if sequence else start
+
+    def replace(m):
+        s = m.group(1)
+        return f"{len(s)}{s[0]}"
+
+    regex = re.compile(r"((\d)\2*)")
+    for _ in range(r):
+        n = regex.sub(replace, n)
+
+    return len(n)
 
 
-def part_2(filename=None):
-    pass
+def part_1(sequence=None):
+    return calculate(40, sequence)
+
+
+def part_2(sequence=None):
+    return calculate(50, sequence)
 
 
 if __name__ == "__main__":
